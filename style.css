@@ -5,47 +5,101 @@ body {
   color: white;
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 15px;
+  align-items: center;
+  padding: 15px 30px;
   background: #08154d;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo {
   height: 50px;
 }
 
+/* NAV */
 nav a {
   color: white;
   margin: 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-.hero {
-  text-align: center;
-  padding: 50px;
+nav a:hover {
+  color: cyan;
 }
 
+/* HERO BANNER (NEW - MAIN UPGRADE) */
+.hero-banner {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 40px;
+  max-width: 700px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+
+.hero-overlay h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  color: #ccc;
+  font-size: 16px;
+}
+
+/* SECTIONS */
 section {
-  padding: 30px;
+  padding: 40px;
 }
 
+h2 {
+  margin-bottom: 15px;
+}
+
+/* IMAGE */
 .full-img {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
+  margin-top: 15px;
+  border-radius: 10px;
 }
 
+/* LIST */
+ul {
+  line-height: 1.8;
+}
+
+/* NOFARI BUTTON */
 .nofari-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  padding: 15px;
+  padding: 15px 20px;
   background: cyan;
   border: none;
   border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
+/* CHAT BOX */
 .chat-box {
   display: none;
   position: fixed;
@@ -54,4 +108,18 @@ section {
   background: white;
   color: black;
   padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-overlay {
+    margin: 20px;
+  }
 }
