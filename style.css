@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0B1E6D;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background: #08154d;
+}
+
+.logo {
+  height: 50px;
+}
+
+nav a {
+  color: white;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px;
+}
+
+section {
+  padding: 30px;
+}
+
+.full-img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.nofari-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px;
+  background: cyan;
+  border: none;
+  border-radius: 50px;
+}
+
+.chat-box {
+  display: none;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  color: black;
+  padding: 20px;
+}
