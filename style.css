@@ -1,125 +1,204 @@
-body {
-  font-family: Arial, sans-serif;
+/* RESET */
+* {
   margin: 0;
-  background: #0B1E6D;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  background: linear-gradient(180deg, #0b1e6d 0%, #0a1450 100%);
   color: white;
 }
 
-/* HEADER */
-header {
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  background: #0b1e6d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: #08154d;
-}
-
-.logo-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .logo {
-  height: 50px;
+  height: 40px;
 }
 
-/* NAV */
 nav a {
   color: white;
-  margin: 10px;
   text-decoration: none;
-  font-weight: bold;
+  margin-left: 25px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: cyan;
+  color: #00d4ff;
 }
 
-/* HERO BANNER (NEW - MAIN UPGRADE) */
-.hero-banner {
+/* HERO */
+.hero {
   position: relative;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
+  padding: 100px 40px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.65);
-  padding: 40px;
+  position: relative;
   max-width: 700px;
-  margin-left: 40px;
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
 .hero-overlay h1 {
-  font-size: 38px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 
 .hero-overlay p {
-  color: #ccc;
-  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #00d4ff;
+  color: black;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
 }
 
 /* SECTIONS */
-section {
-  padding: 40px;
+.section {
+  padding: 80px 40px;
+  text-align: center;
 }
 
-h2 {
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.section p {
+  max-width: 700px;
+  margin: auto;
+  color: #ccc;
+}
+
+/* DARK SECTION */
+.dark {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* GRID */
+.grid {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CARDS */
+.card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+}
+
+.card p {
+  padding: 0 15px 20px;
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* STATS */
+.stats div {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.stats h3 {
+  font-size: 28px;
+}
+
+/* CTA */
+.cta {
+  padding: 80px 40px;
+  text-align: center;
+  background: linear-gradient(90deg, #00d4ff, #0077ff);
+  color: black;
+}
+
+.cta h2 {
   margin-bottom: 15px;
 }
 
-/* IMAGE */
-.full-img {
-  width: 100%;
-  max-width: 700px;
-  margin-top: 15px;
-  border-radius: 10px;
-}
-
-/* LIST */
-ul {
-  line-height: 1.8;
-}
-
-/* NOFARI BUTTON */
-.nofari-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 15px 20px;
-  background: cyan;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-/* CHAT BOX */
-.chat-box {
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  background: white;
-  color: black;
+/* FOOTER */
+footer {
   padding: 20px;
-  border-radius: 10px;
-  width: 250px;
+  text-align: center;
+  background: #0a1450;
+  font-size: 14px;
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  .hero {
+    padding: 60px 20px;
   }
 
-  .hero-overlay {
-    margin: 20px;
+  .hero-overlay h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    display: none;
   }
 }
